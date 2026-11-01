@@ -84,7 +84,7 @@
       .showline {
         font-family: "Cinzel", serif;
         letter-spacing: 0.34em;
-        font-size: 12px;
+        font-size: 12.5px;
         font-weight: 600;
         color: var(--amber);
         text-transform: uppercase;
@@ -115,7 +115,7 @@
         display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
         margin: 16px 0 4px;
         font-family: ui-monospace, "SF Mono", Menlo, monospace;
-        font-size: 11.5px;
+        font-size: 12.5px;
         letter-spacing: 0.08em;
         text-transform: uppercase;
         color: var(--muted);
@@ -218,7 +218,7 @@
       .searchrow input:focus-visible { outline: 2px solid var(--amber); outline-offset: 1px; }
       .searchrow button {
         font: inherit; font-family: "Cinzel", serif; font-size: 12.5px; letter-spacing: 0.1em;
-        cursor: pointer; padding: 8px 14px; color: var(--ink);
+        cursor: pointer; padding: 8px 14px; min-height: 44px; color: var(--ink);
         background: var(--panel-2); border: 1px solid var(--line-strong); border-radius: 3px;
       }
       .searchrow button:hover, .searchrow button:focus-visible { border-color: var(--amber); background: var(--amber-soft); outline: none; }
@@ -280,7 +280,7 @@
       .band-head { text-align: center; margin-bottom: 12px; border-bottom: 3px double var(--line); padding-bottom: 11px; }
       .band-head .greek {
         font-family: ui-monospace, Menlo, monospace;
-        font-size: 11.5px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--amber);
+        font-size: 12.5px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--amber);
       }
       .band-head h2 {
         font-family: "Cinzel", serif; font-weight: 700;
@@ -293,7 +293,7 @@
       .chips { display: flex; flex-wrap: wrap; gap: 9px; justify-content: center; }
       .reglabel {
         text-align: center; font-family: ui-monospace, Menlo, monospace;
-        font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase;
+        font-size: 12.5px; letter-spacing: 0.2em; text-transform: uppercase;
         color: var(--muted); margin: 14px 0 8px;
       }
       .chips.reg { gap: 7px; }
@@ -307,6 +307,7 @@
         border-radius: 3px;
         color: var(--ink);
         padding: 9px 13px 8px;
+        min-height: 44px;
         min-width: 128px;
         max-width: 230px;
         transition: border-color 0.15s, background 0.15s, transform 0.15s;
@@ -327,10 +328,10 @@
       }
       .chip .nm { font-family: "Cinzel", serif; font-weight: 700; font-size: 15.5px; letter-spacing: 0.04em; display: block; line-height: 1.2; }
       .chip .ep { font-style: italic; font-size: 13.5px; color: var(--amber); display: block; margin-top: 2px; line-height: 1.25; }
-      .chip .also { display: block; margin-top: 4px; font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-      .chips.reg button.chip { min-width: 0; padding: 6px 10px 5px; }
+      .chip .also { display: block; margin-top: 4px; font-family: ui-monospace, Menlo, monospace; font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+      .chips.reg button.chip { min-width: 0; min-height: 44px; padding: 6px 10px 5px; }
       .chips.reg .chip .nm { font-size: 13px; }
-      .chips.reg .chip .ep { font-size: 12px; }
+      .chips.reg .chip .ep { font-size: 12.5px; }
       button.chip.ghost { border-style: dashed; opacity: 0.78; background: transparent; }
       button.chip.ghost .nm { font-size: 13px; }
       /* ---------- grove ---------- */
@@ -366,7 +367,7 @@
       .house dl { margin: 0; font-size: 15px; }
       .house .row { display: flex; gap: 8px; padding: 3px 0; border-top: 1px dotted var(--line); }
       .house .row:first-of-type { border-top: none; }
-      .house dt { font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); flex: 0 0 62px; padding-top: 4px; }
+      .house dt { font-family: ui-monospace, Menlo, monospace; font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); flex: 0 0 62px; padding-top: 4px; }
       .house dd { margin: 0; color: var(--ink-soft); }
       .house dd b { color: var(--ink); font-weight: 600; }
       .house .known { font-style: italic; margin-top: 8px; font-size: 14.5px; color: var(--ink-soft); border-top: 1px dotted var(--line); padding-top: 7px; }
@@ -377,16 +378,16 @@
       .house-mono { display: flex; align-items: center; justify-content: center; width: 84px; height: 105px; margin: 0 auto 6px; border: 1px solid var(--line-strong); background: var(--panel-2); font-family: "Cinzel", serif; font-weight: 700; font-size: 28px; letter-spacing: 0.08em; color: var(--amber); box-shadow: 0 3px 10px var(--shadow); }
       .foothills .house-portrait, .foothills .house-mono { width: 64px; height: 80px; font-size: 21px; }
       .house-leader-name { font-family: "Cinzel", serif; font-weight: 700; font-size: 15px; letter-spacing: 0.03em; line-height: 1.2; }
-      .house-leader-role { font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
-      .house-leader-note { font-size: 12px; font-style: italic; color: var(--muted); margin-top: 2px; }
+      .house-leader-role { font-family: ui-monospace, Menlo, monospace; font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+      .house-leader-note { font-size: 12.5px; font-style: italic; color: var(--muted); margin-top: 2px; }
       /* model roster — styled typographic mark + name + what the model is */
       .model-roster { margin-top: 10px; border-top: 1px dotted var(--line); padding-top: 8px; }
-      .model-roster-label { text-align: center; font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 7px; }
+      .model-roster-label { text-align: center; font-family: ui-monospace, Menlo, monospace; font-size: 12.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 7px; }
       .model { display: flex; gap: 9px; align-items: flex-start; padding: 5px 0; border-top: 1px dotted var(--line); }
       .model:first-of-type { border-top: none; }
-      .model-mark { flex: 0 0 42px; width: 42px; min-height: 42px; display: flex; align-items: center; justify-content: center; text-align: center; border: 1.5px solid var(--amber); background: var(--amber-soft); color: var(--ink); font-family: "Cinzel", serif; font-weight: 700; font-size: 10.5px; letter-spacing: 0.04em; line-height: 1.1; padding: 3px 2px; }
+      .model-mark { flex: 0 0 42px; width: 42px; min-height: 42px; display: flex; align-items: center; justify-content: center; text-align: center; border: 1.5px solid var(--amber); background: var(--amber-soft); color: var(--ink); font-family: "Cinzel", serif; font-weight: 700; font-size: 12.5px; letter-spacing: 0.04em; line-height: 1.1; padding: 3px 2px; }
       .model-mark.round { border-radius: 50%; }
-      .model-mark.wide { font-size: 9px; }
+      .model-mark.wide { font-size: 12.5px; }
       .model-info { min-width: 0; }
       .model-name { display: block; font-weight: 600; font-size: 14.5px; color: var(--ink); line-height: 1.2; }
       .model-what { display: block; font-size: 13px; color: var(--ink-soft); line-height: 1.35; margin-top: 1px; }
@@ -407,7 +408,7 @@
       .register-strip h3 { font-family: "Cinzel", serif; font-size: 14px; letter-spacing: 0.16em; margin: 0 0 6px; color: var(--ink); text-align: center; }
       .register-strip p { margin: 4px 0; }
       .register-strip b { color: var(--ink); }
-      .register-strip .openentry { font: inherit; background: none; border: 1px solid var(--amber); border-radius: 2px; padding: 5px 14px; cursor: pointer; color: var(--ink); font-family: "Cinzel", serif; font-size: 13px; letter-spacing: 0.1em; margin-top: 8px; }
+      .register-strip .openentry { font: inherit; background: none; border: 1px solid var(--amber); border-radius: 2px; padding: 5px 14px; min-height: 44px; cursor: pointer; color: var(--ink); font-family: "Cinzel", serif; font-size: 13px; letter-spacing: 0.1em; margin-top: 8px; }
       .register-strip .openentry:hover, .register-strip .openentry:focus-visible { background: var(--amber-soft); outline: none; }
       .unchaired { border: 1px dashed var(--amber); background: var(--panel); }
       .unchaired h3 { color: var(--amber); font-size: 16px; }
@@ -443,7 +444,7 @@
       .heavylines li button { font: inherit; background: none; border: none; padding: 0; cursor: pointer; color: var(--ink); font-weight: 600; text-decoration: underline dotted var(--amber); text-underline-offset: 3px; }
       /* ---------- line browser (browse the lines by name) ---------- */
       .linefilter { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin: 6px 0 4px; }
-      .linefilter button { font: inherit; font-size: 13.5px; cursor: pointer; background: var(--panel-2); color: var(--ink-soft); border: 1px solid var(--line); border-radius: 999px; padding: 3px 11px; }
+      .linefilter button { font: inherit; font-size: 13.5px; cursor: pointer; background: var(--panel-2); color: var(--ink-soft); border: 1px solid var(--line); border-radius: 999px; padding: 3px 11px; min-height: 44px; }
       .linefilter button:hover, .linefilter button:focus-visible { border-color: var(--amber); color: var(--ink); outline: none; }
       .linefilter button.on { background: var(--amber-soft); border-color: var(--amber); color: var(--ink); font-weight: 600; }
       .linecount { text-align: center; font-size: 13.5px; color: var(--muted); font-style: italic; margin: 2px 0 8px; }
@@ -496,7 +497,7 @@
         position: sticky; top: 0; float: right;
         font: inherit; font-family: "Cinzel", serif; font-size: 13px; letter-spacing: 0.1em;
         background: var(--panel-2); border: 1px solid var(--line-strong); color: var(--ink);
-        padding: 5px 12px; cursor: pointer; border-radius: 2px;
+        padding: 5px 12px; min-height: 44px; cursor: pointer; border-radius: 2px;
       }
       #drawer .portrait { margin: 4px 0 12px; }
       #drawer .portrait img {
@@ -515,7 +516,7 @@
       #drawer h2 { font-family: "Cinzel", serif; font-size: 26px; letter-spacing: 0.05em; margin: 6px 0 2px; line-height: 1.15; }
       #drawer .ep { font-style: italic; color: var(--amber); font-size: 17px; margin: 0 0 12px; }
       #drawer .field { border-top: 1px dotted var(--line); padding: 9px 0 3px; }
-      #drawer .field h4 { font-family: ui-monospace, Menlo, monospace; font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin: 0 0 4px; }
+      #drawer .field h4 { font-family: ui-monospace, Menlo, monospace; font-size: 12.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin: 0 0 4px; }
       #drawer .field p { margin: 0 0 6px; font-size: 15.5px; color: var(--ink-soft); }
       #drawer .field p b { color: var(--ink); }
       #drawer .field a.watchlink { color: var(--amber); font-weight: 600; text-decoration: underline dotted var(--amber); text-underline-offset: 3px; }
@@ -525,7 +526,7 @@
       #drawer ul { margin: 0 0 6px; padding-left: 18px; color: var(--ink-soft); font-size: 15px; }
       #drawer ul li { margin-bottom: 4px; }
       #drawer .flag { border: 1px dashed var(--amber); padding: 9px 12px; font-size: 14px; color: var(--ink-soft); margin-top: 10px; }
-      #drawer .flag b { color: var(--amber); font-family: "Cinzel", serif; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; display: block; margin-bottom: 3px; }
+      #drawer .flag b { color: var(--amber); font-family: "Cinzel", serif; font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; display: block; margin-bottom: 3px; }
       .chair { display: block; padding: 5px 0; }
       .chair b { font-family: "Cinzel", serif; font-size: 13.5px; letter-spacing: 0.08em; }
       /* ---------- this week on the wall ---------- */
@@ -545,11 +546,11 @@
       .moves-list button {
         font: inherit; font-size: 13.5px; cursor: pointer; text-align: left;
         background: var(--chip-bg); color: var(--ink-soft);
-        border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px 4px;
+        border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px 4px; min-height: 44px;
       }
       .moves-list button b { color: var(--ink); font-weight: 600; }
       .moves-list button .md {
-        font-family: ui-monospace, Menlo, monospace; font-size: 10.5px;
+        font-family: ui-monospace, Menlo, monospace; font-size: 12.5px;
         letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); margin-right: 6px;
       }
       .moves-list button:hover, .moves-list button:focus-visible { border-color: var(--amber); background: var(--amber-soft); outline: none; }
@@ -563,7 +564,7 @@
       .web-controls button {
         font: inherit; font-size: 13.5px; cursor: pointer;
         background: var(--panel-2); color: var(--ink-soft);
-        border: 1px solid var(--line); border-radius: 999px; padding: 3px 11px;
+        border: 1px solid var(--line); border-radius: 999px; padding: 3px 11px; min-height: 44px;
       }
       .web-controls button:hover, .web-controls button:focus-visible { border-color: var(--amber); color: var(--ink); outline: none; }
       .web-controls button.on { background: var(--amber-soft); border-color: var(--amber); color: var(--ink); font-weight: 600; }
@@ -576,7 +577,7 @@
       #web-svg { display: block; width: 100%; height: auto; }
       #web-svg .web-edge { fill: none; stroke: var(--amber); stroke-width: 1.5; stroke-dasharray: 1.5 5; stroke-linecap: round; }
       #web-svg .web-elabel {
-        font-family: "Newsreader", Georgia, serif; font-style: italic; font-size: 11.5px;
+        font-family: "Newsreader", Georgia, serif; font-style: italic; font-size: 12.5px;
         fill: var(--ink); paint-order: stroke; stroke: var(--svg-label-bg);
         stroke-width: 5px; stroke-linejoin: round; text-anchor: middle;
       }
@@ -585,7 +586,7 @@
         letter-spacing: 0.14em; fill: var(--amber); text-anchor: middle; text-transform: uppercase;
       }
       #web-svg .web-colcount {
-        font-family: ui-monospace, Menlo, monospace; font-size: 10px;
+        font-family: ui-monospace, Menlo, monospace; font-size: 12.5px;
         letter-spacing: 0.14em; fill: var(--muted); text-anchor: middle;
       }
       #web-svg .web-node { cursor: pointer; }
@@ -615,7 +616,7 @@
         font: inherit; background: none; border: none; padding: 0; cursor: pointer;
         color: var(--ink); font-weight: 600; text-decoration: underline dotted var(--amber); text-underline-offset: 3px;
       }
-      .web-readout .openentry { border: 1px solid var(--amber); border-radius: 2px; padding: 5px 14px; text-decoration: none; font-family: "Cinzel", serif; font-size: 13px; letter-spacing: 0.1em; margin-top: 9px; }
+      .web-readout .openentry { border: 1px solid var(--amber); border-radius: 2px; padding: 5px 14px; min-height: 44px; text-decoration: none; font-family: "Cinzel", serif; font-size: 13px; letter-spacing: 0.1em; margin-top: 9px; }
       .web-readout .openentry:hover, .web-readout .openentry:focus-visible { background: var(--amber-soft); outline: none; }
       .web-note { text-align: center; font-style: italic; font-size: 13.5px; color: var(--muted); margin: 8px auto 0; max-width: 780px; }
       /* ---------- the timeline ---------- */
@@ -623,7 +624,7 @@
       .timeline-sec h2 { font-family: "Cinzel", serif; font-size: 19px; letter-spacing: 0.12em; text-align: center; margin: 0 0 4px; }
       .timeline-sec .sub { text-align: center; font-style: italic; color: var(--ink-soft); margin: 0 auto 12px; font-size: 15px; max-width: 760px; }
       .tl-filter { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin: 4px 0 10px; }
-      .tl-filter button { font: inherit; font-size: 13.5px; cursor: pointer; background: var(--panel-2); color: var(--ink-soft); border: 1px solid var(--line); border-radius: 999px; padding: 3px 11px; }
+      .tl-filter button { font: inherit; font-size: 13.5px; cursor: pointer; background: var(--panel-2); color: var(--ink-soft); border: 1px solid var(--line); border-radius: 999px; padding: 3px 11px; min-height: 44px; }
       .tl-filter button:hover, .tl-filter button:focus-visible { border-color: var(--amber); color: var(--ink); outline: none; }
       .tl-filter button.on { background: var(--amber-soft); border-color: var(--amber); color: var(--ink); font-weight: 600; }
       .tl-scroll { max-height: 620px; overflow-y: auto; padding: 2px 6px 2px 2px; scrollbar-width: thin; }
@@ -635,7 +636,7 @@
       .tl-event { display: grid; grid-template-columns: 112px 22px minmax(0, 1fr); gap: 0 10px; position: relative; padding: 7px 0; }
       .tl-event::before { content: ""; position: absolute; left: 122px; top: 0; bottom: 0; width: 0; border-left: 2px dotted var(--line-strong); }
       .tl-event .tl-date {
-        font-family: ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.06em;
+        font-family: ui-monospace, Menlo, monospace; font-size: 12.5px; letter-spacing: 0.06em;
         text-transform: uppercase; color: var(--muted); text-align: right; padding-top: 3px;
       }
       .tl-event .tl-dot {
@@ -644,7 +645,7 @@
       }
       .tl-event .tl-body h3 { font-family: "Cinzel", serif; font-size: 16px; letter-spacing: 0.04em; margin: 0; display: inline; }
       .tl-event .tl-tag {
-        display: inline-block; font-family: ui-monospace, Menlo, monospace; font-size: 9.5px;
+        display: inline-block; font-family: ui-monospace, Menlo, monospace; font-size: 12.5px;
         letter-spacing: 0.14em; text-transform: uppercase; color: var(--amber);
         border: 1px solid var(--amber); border-radius: 2px; padding: 1px 6px; margin-left: 8px; vertical-align: 2px;
       }
@@ -657,7 +658,8 @@
       }
       .tl-event .tl-links button:hover, .tl-event .tl-links button:focus-visible,
       .tl-event .tl-links a:hover, .tl-event .tl-links a:focus-visible { border-color: var(--amber); background: var(--amber-soft); outline: none; }
-      .tl-event .tl-links .lk-label { font-family: ui-monospace, Menlo, monospace; font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-right: 5px; }
+      .tl-event .tl-links button { min-height: 44px; }
+      .tl-event .tl-links .lk-label { font-family: ui-monospace, Menlo, monospace; font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-right: 5px; }
       .tl-event.flash { background: var(--amber-soft); }
       .tl-event.lhide { display: none; }
       .tl-year.lhide { display: none; }
@@ -1533,9 +1535,6 @@ function __ptURL(f, s) { var k = f + s; return __PTDATA[k] || ('assets/portraits
         hobbhahn:   { f: "hobbhahn-marius",       g: "likeness" },
         barnes:     { f: "barnes-beth",           g: "likeness" },
         gorton:     { f: "gorton-liv",            g: "likeness" },
-        balesni:    { f: "balesni-mikita",        g: "likeness" },
-        engels:     { f: "engels-josh",           g: "likeness" },
-        benton:     { f: "benton-joe",            g: "likeness" },
         zhoufreeman:{ f: "zhou-william", f2: "freeman-daniel", g: "likeness" }
       };
 
