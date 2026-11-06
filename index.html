@@ -2300,8 +2300,14 @@ function __ptURL(f, s) { var k = f + s; return __PTDATA[k] || ('assets/portraits
           try {
             var len = rec.path.getTotalLength();
             var tw = webCtx.measureText(rec.e.short).width + 12;
-            var tCand = [0.5, 0.36, 0.64, 0.24, 0.76, 0.13, 0.87];
-            var pCand = [0, -16, 16, -32, 32, -50, 50, -70, 70];
+            /* Pair fix: the Boltzmann label otherwise lands on the same row
+               as the pacing-essay label, edge to edge and flush with the
+               graph's left edge. Seat it low on its own line instead, in
+               the empty gap above Sejnowski's row, clear of both. */
+            var pairFix = (rec.e.a === "hinton" && rec.e.b === "sejnowski")
+              ? { t: [0.88, 0.875, 0.885], p: [-54, -56, -60, -52] } : null;
+            var tCand = pairFix ? pairFix.t : [0.5, 0.36, 0.64, 0.24, 0.76, 0.13, 0.87];
+            var pCand = pairFix ? pairFix.p : [0, -16, 16, -32, 32, -50, 50, -70, 70];
             var best = null;
             for (var i = 0; i < tCand.length; i++) {
               for (var j = 0; j < pCand.length; j++) {
