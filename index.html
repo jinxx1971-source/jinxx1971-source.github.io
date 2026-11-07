@@ -619,6 +619,12 @@
       .web-readout .openentry { border: 1px solid var(--amber); border-radius: 2px; padding: 5px 14px; min-height: 44px; text-decoration: none; font-family: "Cinzel", serif; font-size: 13px; letter-spacing: 0.1em; margin-top: 9px; }
       .web-readout .openentry:hover, .web-readout .openentry:focus-visible { background: var(--amber-soft); outline: none; }
       .web-note { text-align: center; font-style: italic; font-size: 13.5px; color: var(--muted); margin: 8px auto 0; max-width: 780px; }
+      .web-hint { display: none; }
+      @media (max-width: 640px) {
+        .web-hint { display: block; text-align: center; font-style: italic; font-size: 13.5px; color: var(--muted); margin: 6px auto 8px; max-width: 780px; }
+        .web-scroll { overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: thin; max-width: 100%; }
+        .web-scroll #web-svg { width: 900px; min-width: 900px; max-width: none; height: auto; }
+      }
       /* ---------- the timeline ---------- */
       .timeline-sec { margin-top: 34px; border: 1px solid var(--line-strong); background: var(--panel); padding: 18px 22px 12px; }
       .timeline-sec h2 { font-family: "Cinzel", serif; font-size: 19px; letter-spacing: 0.12em; text-align: center; margin: 0 0 4px; }
@@ -1077,7 +1083,10 @@ function __ptURL(f, s) { var k = f + s; return __PTDATA[k] || ('assets/portraits
           <label for="web-pick">Inspect a figure</label>
           <select id="web-pick"><option value="">Choose a name&hellip;</option></select>
         </div>
-        <svg id="web-svg" role="group" aria-label="Relationship graph: figures as nodes, labeled lines between them"></svg>
+        <p class="web-hint">On a phone, the web pans sideways &mdash; drag to explore it.</p>
+        <div class="web-scroll">
+          <svg id="web-svg" role="group" aria-label="Relationship graph: figures as nodes, labeled lines between them"></svg>
+        </div>
         <div class="web-readout" id="web-readout" aria-live="polite"></div>
         <p class="web-note">Labels on the web are the register&rsquo;s own words, shortened only to their opening words where space demands; the full label of every line stands word for word in the Heavy Lines register below, and in each figure&rsquo;s entry under &ldquo;Labeled lines.&rdquo;</p>
       </section>
